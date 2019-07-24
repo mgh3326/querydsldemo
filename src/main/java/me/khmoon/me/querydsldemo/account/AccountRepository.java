@@ -1,4 +1,9 @@
 package me.khmoon.me.querydsldemo.account;
 
-public class AccountRepository {
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.querydsl.QuerydslPredicateExecutor;
+
+public interface AccountRepository extends JpaRepository<Account, Long>, QuerydslPredicateExecutor<Account> {
+
 }
